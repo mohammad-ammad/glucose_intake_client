@@ -44,7 +44,8 @@ const Login = () => {
 
     if(response?.status === 200) {
       localStorage.setItem("User", response.data.token)
-      navigate("/dashboard");
+      // navigate("/dashboard");
+      window.location.href = "/dashboard";
       setLoading(false);
     }
   };
